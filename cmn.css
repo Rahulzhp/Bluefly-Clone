@@ -1,5 +1,5 @@
 #left {
-    /* border: 1px solid red; */
+
     width: 95%;
     height: 100%;
     color: white;
@@ -12,7 +12,7 @@
     width: 95%;
     height: auto;
     display: flex;
-    margin-top: 15px;
+    margin-top: 23px;
 }
 
 #right>div {
@@ -26,37 +26,101 @@
 }
 #sticky{
     position: sticky;
-    top: 50px;
+    top: 0px;
+    padding-top: 15px;
     margin-bottom: 10px;
+    background-color: white;
 }
 #rhl{
     width: 99%;
     height: 10px;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 25px;
 }
 #rhl>img{
     width:100%;
-    height: 400px;
+    height: 430px;
 }
-button{
+#rhl>button{
     position: absolute;
-    top: 47%;
+    top: 53%;
     background-color: rgba(100,100,100,0.1);
     border: none;
     font-size: 30px;
     color: white;
 }
-button:nth-child(2){
+#rhl>button:nth-child(2){
     left: 15px;
 
 }
-button:nth-child(3){
+#rhl>button:nth-child(3){
     right: 15px;
 
 }
 #vck{
-    width: 99%;
+    width: 90%;
+    height: 50vh;
+    margin-top: 445px;
+    display: flex;
+    margin-left: 70px;
+}
+#vck>div{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+
+}
+#vck>div>img{
+    width: 90%;
+    height: 400px;
+}
+#vck>div>h1{
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 65px;
+    color: white;
+}
+#vck>div>p:nth-child(1){
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 60px;
+    color: white;
+    font-size: 30px;
+}
+#vck>div>button{
+    position:absolute;
+    margin-top: 350px;
+    margin-left: 90px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 30px;
+    border: none;
+}#vck>div>p:nth-child(3){
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 37px;
+    font-size: 25px;
+    color: white;
+}
+#das{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    margin-top: 150px;
+}
+#das>div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px 15px;
+}
+#das>div img{
+    width: 85%;
+}
+#das>div h3{
+    color: rgb(75, 69, 69);
+}
+#glw{
+    width: 100%;
     height: 200px;
-    border: 1px solid red;
 }
