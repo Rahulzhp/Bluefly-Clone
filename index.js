@@ -1,5 +1,5 @@
 let imagesLink=[
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEpQ4KZ2UP31NFmNyVm6hBaC-A2LR4-N_jPQ&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA7N9rfxo1YFoOhYjeCCVexA048ufzY2uMgw&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTavwhMxYMC6d-cfuH3DAwxB39NHsXG5aWtmQ&usqp=CAU"
+    "https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Valentino_1512x.jpg?v=1630420054","https://cdn.shopify.com/s/files/1/0248/3473/6191/files/saint_laurent_3_1512x.jpg?v=1630508580","https://cdn.shopify.com/s/files/1/0248/3473/6191/files/sunglasses1_1512x.jpg?v=1615211259","https://cdn.shopify.com/s/files/1/0248/3473/6191/files/Designer_Shoes_1512x.jpg?v=1630420978"
 ]
 let leftBtn=document.getElementById("left-btn");
 let rightBtn=document.getElementById("right-btn");
