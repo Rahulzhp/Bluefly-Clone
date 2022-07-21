@@ -13,16 +13,20 @@
     height: auto;
     display: flex;
     margin-top: 23px;
+    margin-left: 45px;
 }
 
-#right>div {
+#right>div{
    margin: auto;
+   font-weight: bold;
+  
    
 }
 #right>div>a{
     font-weight: bold;
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 #sticky{
     position: sticky;
@@ -36,10 +40,21 @@
     height: 10px;
     margin: auto;
     margin-top: 25px;
+    transition: all 50ms ease;
 }
-#rhl>img{
-    width:100%;
-    height: 430px;
+#rhl>h1{
+    position: absolute;
+    margin-top: 11%;
+    margin-left: 200px;
+    color:white;
+    font-size: 80px;
+}
+#rhl>h3{
+    position: absolute;
+    margin-top: 19%;
+    margin-left: 155px;
+    color:white;
+    font-size: 45px;
 }
 #rhl>button{
     position: absolute;
@@ -48,19 +63,26 @@
     border: none;
     font-size: 30px;
     color: white;
+    cursor:pointer;
 }
-#rhl>button:nth-child(2){
-    left: 15px;
+#rhl>img{
+    width:100%;
+    height: 450px;
+}
 
+#rhl>button:nth-child(4){
+    left: 15px;
+   
 }
-#rhl>button:nth-child(3){
+#rhl>button:nth-child(5){
     right: 15px;
+    
 
 }
 #vck{
     width: 90%;
     height: 50vh;
-    margin-top: 445px;
+    margin-top: 465px;
     display: flex;
     margin-left: 70px;
 }
@@ -108,19 +130,114 @@
     margin: auto;
     text-align: center;
     margin-top: 150px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #das>div{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     gap: 15px 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#das>div>div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 #das>div img{
     width: 85%;
 }
-#das>div h3{
+#das>div h3:hover{
     color: rgb(75, 69, 69);
+    cursor: pointer;
 }
 #glw{
     width: 100%;
     height: 200px;
+    margin-top: 30px;
+    text-align: center;
 }
+#glw>img{
+    width: 100%;
+    height: 395px;
+}
+#glw>button{
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 605px;
+    padding: 11px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+
+}
+#glw>h1{
+    position: absolute;
+    margin-top: 9%;
+    margin-left: 320px;
+    color:white;
+    font-size: 80px;
+
+}
+#glw>h3{
+    position: absolute;
+    margin-top: 16%;
+    margin-left: 250px;
+    color: whitesmoke;
+    font-size: 33px;
+
+
+}#art{
+    width: 95%;
+    margin-top: 255px;
+    text-align: center;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+span{
+    color: red;
+}
+#art>div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px 15px;
+}
+#art>div>div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+#art>div img{
+    width: 85%;
+}
+#art>button{
+    margin-bottom: 30px;
+    font-size: 17px;
+    padding: 5px;
+
+} 
+#art>div>div>h3{
+    font-size: 14px;
+    padding: 0px 13px;
+    color: grey;
+
+}
+#smt>div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px 15px;
+}
+#smt>div>div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+}
+#smt>div img{
+    width: 100%;
+}
+#smt>button{
+    margin-bottom: 30px;
+    font-size: 17px;
+    padding: 5px;
+
+} 
+#smt>div>div>h3{
+    font-size: 14px;
+    padding: 0px 13px;
+    color: grey; 
+}     
