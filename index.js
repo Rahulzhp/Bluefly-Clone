@@ -46,22 +46,15 @@ let items=[
       },
       {
         image_url:
-          "https://content.shop4reebok.com/static/Product-GD8567/MEN_TRAINING_PANTS_GD8567_1.jpg.plp ",
-        name: " MEN'S TRAINING WORKOUT READY ELITAGE PANTS ",
-        price: 1999,
-        strikedoffprice: 3199,
-      },
-      {
-        image_url:
           "https://content.shop4reebok.com/static/Product-GQ8758/reebok_GQ8758_1.jpg.plp ",
-        name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+        name: "MEN'S REEBOK POLO T-SHIRTS TEE",
         price: 769,
         strikedoffprice: 1099,
       },
       {
         image_url:
           "https://content.shop4reebok.com/static/Product-FQ5266/UNISEX_TRAINING_BAGS_FQ5266_1.jpg.plp",
-        name: "UNISEX REEBOK TRAINING ACTIVE CORE BACKPACK - MEDIUM",
+        name: "UNISEX REEBOK BACKPACK - MEDIUM",
         price: 949,
         strikedoffprice: 1899,
       },
@@ -78,6 +71,13 @@ let items=[
         name: "WOMEN'S REEBOK POLYTIGHT",
         price: 1249,
         strikedoffprice: 1749,
+      },
+      {
+        image_url:
+          "https://content.shop4reebok.com/static/Product-GD8567/MEN_TRAINING_PANTS_GD8567_1.jpg.plp ",
+        name: " MEN'S TRAINING WORKOUT PANTS ",
+        price: 1999,
+        strikedoffprice: 3199,
       },
       
 ]
@@ -100,7 +100,7 @@ let container=document.getElementById("container");
     let proName = document.createElement("p");
     proName.innerText = product.name;
     let dataPrice = document.createElement("p");
-    dataPrice.innerText = product.price;
+    dataPrice.innerText = "$"+product.price;
 
     div.append(image_url, proName, dataPrice, btn);
 
