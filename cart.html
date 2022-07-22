@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(9, auto);
+        gap: 20px;
+      }h1{
+        text-align: center;
+        font-size: 40px;
+        color: teal;
+      }
+      h2{
+        text-align: center;
+      }
+    </style>
+</head>
+
+<body>
+    <h1>Cart Items</h1>
+    <h2>Total Cart Value:- <span id="total-price" >0</span></h2>
+    <div id="container"></div>
+</body>
+
+</html>
+<script>
+    let container = document.getElementById("container");
+    let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
+    let cartLSM= JSON.parse(localStorage.getItem("cart-pages")) || [];
+    let totalPrice=document.getElementById("total-price");
+    function Display(womensData){
+        container.innerHTML=null;
+        let total=0;
+        womensData.forEach(function (product,index) {
+        total=total+Number(product.price)
+        let div = document.createElement("div");
+        let image_url = document.createElement("img");
+        image_url.setAttribute("src", product.image_url);
+
+        let deletebtn = document.createElement("button");
+        deletebtn.innerText = "Delete";
+        deletebtn.addEventListener("click", function () {
+            DeleteCart(index);
+
+        })
+        let proName = document.createElement("p");
+        proName.innerText = product.name;
+        let dataPrice = document.createElement("p");
+        dataPrice.innerText = product.price;
+
+        div.append(image_url, proName, dataPrice, deletebtn);
+
+        document.querySelector("#container").append(div);
+        totalPrice.textContent=total;
+    });
+}
+Display(cartLS);
+function DeleteCart(index){
+    let deletedCart=cartLS.filter(function(el,i){
+        return i !=index;
+
+    })
+    Display(deletedCart);
+    localStorage.setItem("cart-page",JSON.stringify(deletedCart))
+}
+
+
+</script>

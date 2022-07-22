@@ -27,6 +27,13 @@
     color: black;
     text-decoration: none;
     cursor: pointer;
+    border-radius: 5px;
+}
+#right>div>a:hover{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(229, 211, 186);
 }
 #sticky{
     position: sticky;
@@ -34,6 +41,7 @@
     padding-top: 15px;
     margin-bottom: 10px;
     background-color: white;
+    z-index: 2;
 }
 #rhl{
     width: 99%;
@@ -58,7 +66,7 @@
 }
 #rhl>button{
     position: absolute;
-    top: 53%;
+    top: 63%;
     background-color: rgba(100,100,100,0.1);
     border: none;
     font-size: 30px;
@@ -117,12 +125,18 @@
     font-size: 15px;
     font-weight: 30px;
     border: none;
+    color:white;
+    background-color: rgb(22, 22, 22);
+
 }#vck>div>p:nth-child(3){
     position: absolute;
     margin-top: 20%;
     margin-left: 37px;
     font-size: 25px;
     color: white;
+}
+#vck>div>button:hover{
+    font-size: 17px;
 }
 #das{
     width: 100%;
@@ -230,21 +244,27 @@ span{
 #smt>div img{
     width: 100%;
 }
-#smt>div>button{
-    margin-bottom: 200px;
+#smt>div button{
+    margin-bottom: 20px;
     font-size: 17px;
     padding: 5px;
+    color:grey;
 
 } 
+#smt>div button:hover{
+    font-size: 19px;
+    color: white;
+    background-color: black;
+}
 #smt>div>div>h3{
     font-size: 14px;
     padding: 0px 13px;
     color: grey; 
+    border-radius: 5px;
 } 
 #container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(9, auto);
     gap: 20px;
     text-align: center;
   }
@@ -252,8 +272,70 @@ span{
     text-align: center;
     font-size: 40px;
 }  
-  #container>div>button{
-    padding: 5px;
-    background-color: rgb(214, 194, 168);
+#container>div>button{
+    padding: 7px;
+    background-color: rgb(158, 150, 140);
+    border: none;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+#container>div>button:hover{
+    font-size: 16px;
+    color: white;
+    background-color: black;
 
-  } 
+}
+#container>div{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} 
+#large{
+    width: 100%;
+    height: 490px;
+    margin-top: 50px;
+    background-color: rgb(209, 206, 206);
+    text-align: center;
+}
+#large>div{
+    display: grid;
+    grid-template-columns:330px 330px 400px;
+    gap:3px;
+}
+#large>div>img{
+    width: 300px;
+    margin-left: 502px;
+    margin-top: 50px;
+}
+#large>p{
+    font-size: 12px;
+}
+#large>div>div{
+    text-align:left;
+    margin-top: 15px;
+} 
+#sml{
+    padding-top: 78px;
+    font-size: 16px;
+    margin-left: 20px;
+}  
+#slr{
+    padding-top: 35px;
+}
+#slr>div>img{
+    width: 45px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+#slt{
+    margin-left: 75px;
+    padding-top: 25px;
+}
+#blu{
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    text-align: center;
+}
+#blu>p{
+    color: white;
+    padding: 13px 0px;
+}
