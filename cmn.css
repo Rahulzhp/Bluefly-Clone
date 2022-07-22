@@ -230,8 +230,8 @@ span{
 #smt>div img{
     width: 100%;
 }
-#smt>button{
-    margin-bottom: 30px;
+#smt>div>button{
+    margin-bottom: 200px;
     font-size: 17px;
     padding: 5px;
 
@@ -240,4 +240,20 @@ span{
     font-size: 14px;
     padding: 0px 13px;
     color: grey; 
-}     
+} 
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(9, auto);
+    gap: 20px;
+    text-align: center;
+  }
+  #hr{
+    text-align: center;
+    font-size: 40px;
+}  
+  #container>div>button{
+    padding: 5px;
+    background-color: rgb(214, 194, 168);
+
+  } 
