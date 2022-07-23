@@ -119,7 +119,7 @@
     form.addEventListener("submit",function(event){
         event.preventDefault();
         if(signupLS.length==0){
-            alert("please enter something");
+            alert("No User Exist");
             return;
         }
         let obj={
@@ -132,7 +132,7 @@
                 flag=true;
                 localStorage.setItem("signin",JSON.stringify(ele));
                 alert("login sucessfully")
-                window,location.href="mens.html";
+                window,location.href="index.html";
             }
         })
         if(flag==false){

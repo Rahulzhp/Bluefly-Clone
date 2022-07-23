@@ -37,7 +37,6 @@
 }
 #sticky{
     position: sticky;
-    top: 0px;
     padding-top: 15px;
     margin-bottom: 10px;
     background-color: white;
@@ -48,7 +47,7 @@
     height: 10px;
     margin: auto;
     margin-top: 25px;
-    transition: all 50ms ease;
+    transition: all 10ms ease;
 }
 #rhl>h1{
     position: absolute;
@@ -123,10 +122,11 @@
     margin-left: 90px;
     padding: 10px;
     font-size: 15px;
-    font-weight: 30px;
-    border: none;
-    color:white;
-    background-color: rgb(22, 22, 22);
+    font-weight: bold;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    color:black;
+    background-color: rgba(100, 100, 100,0.6);
 
 }#vck>div>p:nth-child(3){
     position: absolute;
@@ -344,3 +344,65 @@ span{
     color: white;
     padding: 13px 0px;
 }
+@media all and (min-width: 401px) and (max-width: 800px) {
+    #das>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px 10px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    #art>div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px 10px;
+    }
+    #smt>div{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 13px 9px;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        text-align: center;
+      }
+      #large>div{
+        display: grid;
+        grid-template-columns:230px 230px 300px;
+        gap:3px;
+    }
+
+}  
+
+@media all and (min-width: 100px) and (max-width: 400px) {
+    #das>div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    #art>div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 5px 5px;
+    }
+    #smt>div{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 7px 4px;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        text-align: center;
+      }
+      #large>div{
+        display: grid;
+        grid-template-columns:130px 130px 200px;
+        gap:3px;
+    }
+      
+
+}   
