@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        #container {
+      #container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(9, auto);
@@ -17,25 +16,52 @@
         font-size: 40px;
         color: teal;
       }
-      #sticky {
-            position: sticky;
-            top: 0px;
-            padding-top: 15px;
-            margin-bottom: 10px;
-            background-color: white;
-            z-index: 2;
-        }
+      #left {
 
-        #left {
+width: 95%;
+height: 100%;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
-            width: 95%;
-            height: 100%;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+#right {
+width: 95%;
+height: auto;
+display: flex;
+margin-top: 23px;
+margin-left: 45px;
+}
 
+#right>div{
+margin: auto;
+font-weight: bold;
+
+
+}
+#right>div>a{
+font-weight: bold;
+color: black;
+text-decoration: none;
+cursor: pointer;
+border-radius: 5px;
+}
+#right>div>a:hover{
+color: white;
+font-size: 18px;
+font-weight: bold;
+background-color: rgb(229, 211, 186);
+}
+#sticky{
+position: sticky;
+top: 0px;
+padding-top: 15px;
+margin-bottom: 10px;
+background-color: white;
+z-index: 2;
+}
+    
         #blu {
             width: 100%;
             height: 50px;
@@ -128,33 +154,56 @@
 } 
 #container>div>p{
     color: blue;
-} 
+}
 #slr>button{
     background-color: black;
     color: white;
     padding: 1px 13px;
-} h2{
-    text-align: center;
-} #total-price{
-    color: red;
-    text-shadow:19px;
-} 
+}    
 
     </style>
-</head>
-
-<body>
-    <div id="sticky">
-        <div id="left">
-            <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
-                alt="">
+  </head>
+  <body>
+    <body>
+        <div id="sticky">
+            <div id="left">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?v=1574278243"
+                    alt="">
+            </div>
+            <div id="right">
+                <div>
+                    <a href="./cloth.html">CLOTHING </a>
+                </div>
+                <div>
+                    <a href="./shoe.html">SHOES</a>
+                </div>
+                <div class>
+                    <a href="">HANDBAGS & ACCESSORIES</a>
+                </div>
+                <div>
+                    <a href="">DESIGNER</a>
+                </div>
+                <div>
+                    <a href="">SUNGLASSES</a>
+                </div>
+                <div>
+                    <a href="">JWELLERY & WATCHES</a>
+                </div>
+                <div>
+                    <a href="./cart.html"> CART</a>
+                </div>
+                <div class="nav">
+                    <a href="./login.html">LOGIN</a>
+                </div>
+                <div class="nav">
+                    <a href="./sign.html">SIGNUP</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="blu">
-        <p>Welcome to BlueFly: Luxury brand at discount price</p>
-    </div>
-    <h1>Cart Items</h1>
-    <h2>Total Cart Value:- <span id="total-price">0</span></h2>
+        <div id="blu">
+            <p>Welcome to BlueFly: Luxury brand at discount price</p>
+        </div>
+    <h1>Trending Sandals & Shoes</h1>
     <div id="container"></div>
     <div id="large" >
         <div>
@@ -185,49 +234,221 @@
         </div>
         <p>© 2022 Bluefly 1998-2020 BLUEFLY.COM OR ITS AFFILIATES ALL RIGHTS RESERVED.</p>
     </div>
-</body>
-
+  </body>
 </html>
 <script>
-    let container = document.getElementById("container");
-    let cartLS = JSON.parse(localStorage.getItem("cart-page")) || [];
-    let cartLSM = JSON.parse(localStorage.getItem("cart-pages")) || [];
-    let totalPrice = document.getElementById("total-price");
-    function Display(womensData) {
-        container.innerHTML = null;
-        let total = 0;
-        womensData.forEach(function (product, index) {
-            total = total + Number(product.price)
-            let div = document.createElement("div");
-            let image_url = document.createElement("img");
-            image_url.setAttribute("src", product.image_url);
+  var mensData = [
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313340673_RLLZ_1_360x.jpg?v=1658236882",
+      name: "WOMEN'S VEJA SPALER ROADMAP SHOES",
+      price: "1170",
+      strikedoffprice: "2599",
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313176317_RLLZ_2_large.jpg?v=1658194068",
+      name: "WOMEN'S KAZRA SWIM ARUBA FLIP ",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4160/reebok_EX4160_1.jpg.plp",
+      name: " MEN'S REEBOK KAZRA AUSTIN SHOES",
+      price: 945,
+      strikedoffprice: 2099,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313340674_RLLZ_2_large.jpg?v=1658383151",
+      name: "MEN'S PUMA AVENGER FLIP LP SLIPPERS",
+      price: 399,
+      strikedoffprice: 799,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EW5173/reebok_EW5173_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING TEMPO SHOES ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313263398_RLLZ_2_large.jpg?v=1658393310",
+      name: "WOMEN'S HUZEGA BOOSTER SHOES ",
+      price: 1440,
+      strikedoffprice: 3199,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313368782_RLLZ_2_large.jpg?v=1657197263",
+      name: "WOMEN'S REEBOK SUPER SOFT FLIP SLIPPERS",
+      price: 699,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313357849_RLLZ_2_large.jpg?v=1657996895",
+      name: "WOMEN'S GAZRA SANDALS",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4285/reebok_EX4285_1.jpg.plp ",
+      name: "MEN'S REEBOK RUNNING GENESIS RUNNER SHOES  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313368761_RLLZ_2_large.jpg?v=1658380206",
+      name: "WOMEN'S REEBOK RUSSLE FLIP SLIPPERS  ",
+      price: 599,
+      strikedoffprice: 999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+    
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313195113_RLLZ_2_large.jpg?v=1658386979",
+      name: "WOMEN'S STUNINIG TREND SANDALS",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+    {
+      image_url:
+        " https://content.shop4reebok.com/static/Product-G57776/reebok_G57776_1.jpg.plp ",
+      name: "  MEN'S REEBOK RUNNING ZTAUR RUN SHOES ",
+      price: 3499,
+      strikedoffprice: 4999,
+    },
+    {
+      image_url:
+        " https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313898823_RLLZ_2_large.jpg?v=1658170996",
+      name: "WOMEN'S REEBOK SWIM ULTRA FLIP ",
+      price: 749,
+      strikedoffprice: 1499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX3994/reebok_EX3994_1.jpg.plp   ",
+      name: "  MEN'S REEBOK SWIM FLEX CONNECT SANDALS ",
+      price: 1149,
+      strikedoffprice: 2299,
+    },
+    {
+      image_url:
+        " https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313009059_RLLZ_2_large.jpg?v=1658127854",
+      name: " WOMEN'S PUMA GENESIS RUNNER SHOE  ",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313357543_RLLZ_1_360x.jpg?v=1657713079",
+      name: " UNISEX WOMEN'S TRAINING ACTIVE",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0318/reebok_FW0318_1.jpg.plp ",
+      name: " MEN'S REEBOK RUNNING TREND RUNNER SHOES",
+      price: 1575,
+      strikedoffprice: 3499,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-G57705/reebok_G57705_1.jpg.plp",
+      name: "UNISEX REEBOK CLASSICS  BASKETBALL SHOES",
+      price: 3919,
+      strikedoffprice: 5599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FW0344/reebok_FW0344_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING RUN FUSION  SHOES",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-EX4272/reebok_EX4272_1.jpg.plp",
+      name: "MEN'S REEBOK RUNNING QUICK DRIFTER SHOES",
+      price: 1620,
+      strikedoffprice: 3599,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-H02293/reebok_H02293_1.jpg.plp",
+      name: "MEN'S REEBOK DYNAMIC ZIGZAG SHOES",
+      price: 7599,
+      strikedoffprice: 9999,
+    },
+    {
+      image_url:
+        "https://content.shop4reebok.com/static/Product-FV9551/MEN_SWIM_SLIPPERS_FV9551_1.jpg.plp",
+      name: "MEN'S REEBOK SWIM SUPERSOFT FLIP SLIPPERS",
+      price: 909,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://cdn.shopify.com/s/files/1/0248/3473/6191/products/1313388618_RLLZ_2_large.jpg?v=1658491645",
+      name: "MEN'S REEBOK SWIM SUPERSOFT FLIP SLIPPERS",
+      price: 909,
+      strikedoffprice: 1299,
+    },
+  ];
+  let container=document.getElementById("container");
+  let cartLSM=JSON.parse(localStorage.getItem("cart-pages")) || [];
+  function Display(mensData){
+    container.innerHTML=null;
+    mensData.forEach(function (product) {
+    let div = document.createElement("div");
+    let image_url = document.createElement("img");
+    image_url.setAttribute("src", product.image_url);
 
-            let deletebtn = document.createElement("button");
-            deletebtn.innerText = "Delete";
-            deletebtn.addEventListener("click", function () {
-                DeleteCart(index);
+    let btn = document.createElement("button");
+    btn.innerText = "Add to cart";
+    btn.addEventListener("click",function(){
+      addToCart(product);
 
-            })
-            let proName = document.createElement("p");
-            proName.innerText = product.name;
-            let dataPrice = document.createElement("h4");
-            dataPrice.innerText = "Price :- $ "+product.price;
+    })
+    let proName = document.createElement("p");
+    proName.innerText = product.name;
+    let dataPrice = document.createElement("h4");
+    dataPrice.innerText ="Price :- $"+product.price;
 
-            div.append(image_url, proName, dataPrice, deletebtn);
+    div.append(image_url, proName, dataPrice, btn);
 
-            document.querySelector("#container").append(div);
-            totalPrice.textContent = total;
-        });
+    document.querySelector("#container").append(div);
+  });
+}
+  function addToCart(product){
+    let flag=false;
+    for(let i=0;i<cartLSM.length;i++){
+      if(cartLSM[i].name===product.name){
+        alert("product already in cart");
+        flag=true;
+        return;
+      }
     }
-    Display(cartLS);
-    function DeleteCart(index) {
-        let deletedCart = cartLS.filter(function (el, i) {
-            return i != index;
-
-        })
-        Display(deletedCart);
-        localStorage.setItem("cart-page", JSON.stringify(deletedCart))
+    if(flag==false){
+    cartLSM.push(product);
+    alert("product added to cart");
+    //console.log(cartLS)
+    localStorage.setItem("cart-pages",JSON.stringify(cartLS));
     }
-
+  }
+  Display(mensData)
 
 </script>

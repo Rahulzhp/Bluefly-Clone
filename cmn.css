@@ -320,6 +320,11 @@ span{
 #slr{
     padding-top: 35px;
 }
+#slr>button{
+    background-color: black;
+    color: white;
+    padding: 1px 13px;
+}    
 #slr>div>img{
     width: 45px;
     margin-left: 50px;
