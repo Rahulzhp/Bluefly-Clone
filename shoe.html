@@ -409,7 +409,7 @@ z-index: 2;
     },
   ];
   let container=document.getElementById("container");
-  let cartLSM=JSON.parse(localStorage.getItem("cart-pages")) || [];
+  let cartLSM=JSON.parse(localStorage.getItem("cart-page")) || [];
   function Display(mensData){
     container.innerHTML=null;
     mensData.forEach(function (product) {
@@ -446,7 +446,7 @@ z-index: 2;
     cartLSM.push(product);
     alert("product added to cart");
     //console.log(cartLS)
-    localStorage.setItem("cart-pages",JSON.stringify(cartLS));
+    localStorage.setItem("cart-page",JSON.stringify(cartLS));
     }
   }
   Display(mensData)

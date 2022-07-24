@@ -124,3 +124,14 @@ let container=document.getElementById("container");
     }
   }
   Display(items)
+
+  let signinLS=JSON.parse(localStorage.getItem("signin"));
+  let nav=document.querySelector(".nav");
+  if(signinLS != null){
+      nav.innerHTML=null;
+      let username=document.createElement("a");
+      username.innerText=signinLS.name;
+      username.style.color="black";
+      nav.append(username);
+
+  }
