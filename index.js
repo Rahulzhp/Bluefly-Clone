@@ -126,7 +126,7 @@ let container=document.getElementById("container");
   Display(items)
 
   let signinLS=JSON.parse(localStorage.getItem("signin"));
-  let nav=document.querySelector(".nav");
+  let nav=document.getElementById("nav");
   if(signinLS != null){
       nav.innerHTML=null;
       let username=document.createElement("a");
