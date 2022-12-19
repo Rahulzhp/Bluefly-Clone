@@ -13,6 +13,6 @@ https://incredible-empanada-82f899.netlify.app/
 
 ![MasterHead](https://i.ibb.co/b7k2FQ3/Screenshot-2022-12-19-135712.png)
 #
-![MasterHead] (https://i.ibb.co/nmcgtX5/Screenshot-2022-12-19-135535.png)
+![MasterHead](https://i.ibb.co/nmcgtX5/Screenshot-2022-12-19-135535.png)
 #
 ![MasterHead](https://i.ibb.co/YhvxnT3/Screenshot-2022-12-19-135639.png)
